@@ -5,6 +5,7 @@ const Hero = () => {
                 <div>
                     <img src="/title.png" alt="MacBook Title" />
                 </div>
+                <p>Yazı</p>
 
                 <div className="hero-buttons">
                     <button className="btn-courses">Eğitimleri İncele</button>
