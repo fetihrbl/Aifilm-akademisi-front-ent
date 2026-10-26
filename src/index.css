@@ -124,26 +124,34 @@ body {
   }
 
   #hero {
-    @apply h-fit lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
+    @apply relative isolate min-h-[calc(100svh-4.5rem)] h-fit lg:min-h-[80vh] flex flex-col lg:flex-row items-center justify-center gap-7 sm:gap-9 lg:gap-6 mt-24 sm:mt-28 lg:mt-20 2xl:mt-[7vh] px-5 sm:px-8 lg:px-10 overflow-hidden;
 
-    div {
-      @apply relative z-10 col-center;
+    .hero-left {
+      @apply relative z-10 col-center w-full lg:w-1/2;
 
       h1 {
         @apply font-semibold lg:text-3xl 2xl:text-5xl text-white;
       }
 
       img {
-        @apply container mx-auto w-2/3;
+        @apply mx-auto w-full max-w-[19rem] sm:max-w-[25rem] lg:max-w-[32rem];
+      }
+    }
+
+    .hero-right {
+      @apply relative z-10 flex-center w-full lg:w-1/2;
+
+      img {
+        @apply w-[min(82vw,24rem)] sm:w-[min(72vw,30rem)] lg:w-full lg:max-w-[38rem] h-auto object-contain;
       }
     }
 
     .hero-buttons {
-      @apply flex-center flex-row gap-4 mt-10 lg:mt-0 mb-5;
+      @apply flex-center flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-7 mb-2;
     }
 
     button {
-      @apply relative z-10 bg-primary text-white py-2 px-6 rounded-full font-semibold text-lg cursor-pointer transition-all duration-300 ease-in-out;
+      @apply relative z-10 bg-primary text-white min-h-12 py-3 px-5 sm:px-7 rounded-full font-semibold text-sm sm:text-base cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap;
 
     }
 
